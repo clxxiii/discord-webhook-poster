@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+  padding: 30px 30px 30px 50px;
+  background: #202225;
+  font-family: 'Whitney Medium';
+  color: white;
+}
+#inputBox, #webhookUrlBox {
+  padding: 10px 10px 10px 10px;
+  margin: auto;
+  background: #36393f;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  width: 60rem;
+  text-align: center;
+}
+
+#webhookUrlBox {
+  margin-bottom: 30px;
+}
+label {
+  vertical-align: top;
+}
+
+input[type="text"], textarea {
+  background-color: #40444b;
+  height: auto;
+  overflow-y: hidden;
+  border: 0;
+  font-family: 'Nunito';
+  font-weight: bold;
+  vertical-align: super;
+  width: 60%;
+  margin-right: 10%;
+  border-radius: 10px;
+  padding: 5px 5px 5px 5px;
+  color: white;
+  box-sizing: border-box;
+  transition: 0.2s ease-in-out;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  width: 61%;
+}
+input[type="text"] {
+  margin: 0%;
+  width: 46%
+}
+input[type="text"]:focus {
+  outline: none;
+  width: 98%;
+}
+#checkbox {
+    text-align: left;
+    margin-left: 18.5%;
+}
+
+input[type=checkbox] {
+  background-color: #40444b;
+  text-align: center;
+  appearance: none;
+  vertical-align: top;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+input[type=checkbox]:active, input[type=checkbox]:checked:active {
+  background-color: #2f3136;
+}
+
+input[type=checkbox]:checked:after {
+  content: '\2714';
+  vertical-align: top;
+  font-size: 18px;
+  padding-top: 4px;
+  color: white;
+}
+
+
+#title {
+  text-align: center;
+  font-size: 32;
+}
+
+button {
+    margin: 1%;
+    background-color: #2f3136;
+    font-family: 'Nunito';
+    color: white;
+    border: 0;
+    width: 90%;
+    font-size: 32px;
+    padding: 8px 8px 8px 8px;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #212326;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px #111111 ;
+  transform: translateY(-2px);
+}
+
+#parameterBoxes {
+  text-align: center;
+  line-height: 2.2em;
+  padding: 10px 0px 20px 0px;
+  text-align: right;
+}
+
+#webConsole {
+  width: 60rem;
+  margin: 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  background-color: #2f3136;
+  padding: 30px 10px 30px 10px;
+  text-align: center;
+}
