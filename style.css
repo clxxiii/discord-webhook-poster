@@ -5,6 +5,8 @@ body {
   background: #202225;
   font-family: 'Whitney Medium';
   color: white;
+  margin: auto;
+  width: 50%;
 }
 #inputBox, #webhookUrlBox {
   padding: 10px 10px 10px 10px;
@@ -12,7 +14,6 @@ body {
   background: #36393f;
   border-radius: 10px;
   box-shadow: 0 0 10px black;
-  width: 60rem;
   text-align: center;
 }
 
@@ -20,7 +21,8 @@ body {
   margin-bottom: 30px;
 }
 label {
-  vertical-align: top;
+  vertical-align: middle;
+  text-align: ;
 }
 
 input[type="text"], textarea {
@@ -32,7 +34,6 @@ input[type="text"], textarea {
   font-weight: bold;
   vertical-align: super;
   width: 60%;
-  margin-right: 10%;
   border-radius: 10px;
   padding: 5px 5px 5px 5px;
   color: white;
@@ -43,19 +44,19 @@ input[type="text"], textarea {
 
 textarea:focus {
   outline: none;
-  margin-right: 11%;
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px #333333;
 }
 input[type="text"] {
   margin: 0%;
-  width: 46%
+  width: 46%;
 }
 input[type="text"]:focus {
   outline: none;
   width: 98%;
 }
 #checkbox {
-    text-align: left;
-    margin-left: 18.5%;
+
 }
 
 input[type=checkbox] {
@@ -111,14 +112,11 @@ button:hover {
 }
 
 #parameterBoxes {
-  text-align: center;
   line-height: 2.2em;
   padding: 10px 0px 20px 0px;
-  text-align: right;
 }
 
 #webConsole {
-  width: 60rem;
   margin: 25px auto;
   border-radius: 10px;
   box-shadow: 0 0 10px black;
