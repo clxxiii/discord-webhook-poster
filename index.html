@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <head>
   <title>Discord Webhook Poster</title>
-  <link rel="stylesheet" href="style.css" \>
+  <link rel="stylesheet" href="./src/style.css" \>
   <link rel="stylesheet" href="./src/font/whitney/style.css" \>
-  <link rel="icon" href="https://cdn.discordapp.com/avatars/265144290240495617/caf8d14e3e82cf096d91980dce17b998.webp?size=160">
+  <link rel="icon" href="https://cdn.discordapp.com/avatars/265144290240495617/caf8d14e3e82cf096d91980dce17b998.webp" \>
 </head>
 <body onload="onLoad()">
   <div id="webhookUrlBox">
     <div id="title">Webhook URL</div>
-    <input id="webhookUrl" type="text" placeholder="https://discord.com/api/webhooks/..."></input>
+    <input id="webhookUrl" class="webhookText" type="text" placeholder="https://discord.com/api/webhooks/..."></input>
   </div>
   <div id="inputBox">
     <div id="title">Webhook Fields</div>
@@ -20,7 +21,7 @@
       <textarea name="content" id="content" placeholder="Message..."></textarea><br>
       <div id="checkbox">
         <label for="">Include Embed?</label><br>
-        <input type="checkbox" id="includeEmbed" onclick="embedFieldToggle()"></input><br>
+        <input type="checkbox" id="includeEmbed" class="checkmark" onclick="embedFieldToggle()"></input><br>
       </div>
       <div id="embedElements">
         <label for="">Title:</label><br>
@@ -36,12 +37,18 @@
       </div>
 
     </div>
-    <button onclick="onSendMessageClick()">Send Webhook Message</button>
+    <button class="send" onclick="onSendMessageClick()">Send Webhook Message</button>
   </div>
   <div id ="webConsole">
       Awaiting Input...
   </div>
+<div id="profileBar">
+  <div id="title" style="padding-top: 20px;">Profiles:</div>
+  <input type="text" id="profileName" class="profile" placeholder="Profile Name" />
+  <button class="save" onclick="profileSave()">Save</button>
+  <div id="profileList"></div>
+</div>
   <div id="socialIcons"><a href="https://github.com/clxxiii/discord-webhook-poster"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style="height: 50px"></a></div>
-
-    <script src="index.js"></script>
+    <script src="src/profiles.js"></script>
+    <script src="src/index.js"></script>
 </body>

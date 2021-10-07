@@ -21,10 +21,46 @@ body {
   margin-bottom: 30px;
 }
 
+.deleteButton {
+  border: 0;
+  width: 60%;
+  height: 20px;
+  background: transparent;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+.deleteButton:hover {
+  background-color: #ED4245;
+  text-shadow: 0 0 10px black;
+  transform: translateY(-2px);
+}
+
+#profile {
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: #4A4D56;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#profile:hover {
+    text-shadow: 0 0 4px black;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px #222222;
+}
+
 #embedElements {
   margin: auto;
   margin-top: 10px;
-  margin-bottom: -27rem;
+  margin-bottom: -32rem;
   padding-bottom: 30px;
   border-radius: 20px;
   background-color: #2c2e33;
@@ -59,17 +95,30 @@ textarea:focus {
   box-shadow: 0 2px 10px #333333;
 }
 
-input[type="text"] {
+input[type="text"].webhookText {
   margin: 0%;
   width: 46%;
 }
 
 input[type="text"]:focus {
   outline: none;
+}
+
+input[type="text"].webhookText:focus {
   width: 98%;
 }
 
-input[type=checkbox] {
+input[type="text"].profile {
+  margin: 10px 10% 0 10%;
+  width: 80%
+}
+
+input[type="text"].profile:focus {
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px #333333;
+}
+
+input[type=checkbox].checkmark {
   background-color: #40444b;
   text-align: center;
   appearance: none;
@@ -82,11 +131,11 @@ input[type=checkbox] {
   transition: 0.1s ease-in-out;
 }
 
-input[type=checkbox]:active, input[type=checkbox]:checked:active {
+input[type=checkbox]:active.checkmark, input[type=checkbox]:checked:active.checkmark {
   background-color: #2f3136;
 }
 
-input[type=checkbox]:checked:after {
+input[type=checkbox].checkmark:checked:after {
   content: '\2714';
   vertical-align: top;
   font-size: 18px;
@@ -97,10 +146,35 @@ input[type=checkbox]:checked:after {
 
 #title {
   text-align: center;
-  font-size: 32;
+  font-size: 32px;
 }
 
-button {
+button.save {
+ font-family: 'Nunito';
+ width: 40%;
+ margin: 20px 4.5% 10px 4.5%;
+ height: 40px;
+ color: white;
+ font-size: 20px;
+ font-weight: bold;
+ border: 0;
+ border-radius: 10px;
+ transition: 0.1s ease-in-out;
+ cursor: pointer;
+}
+button.save {
+  background-color: #5865F2;
+}
+
+button.save:hover {
+ filter: brightness(110%);
+ box-shadow: 0 0 3px black;
+}
+
+button.save:active {
+  transform: scale(0.98);
+}
+button.send {
     margin: 1%;
     background-color: #2f3136;
     font-family: 'Nunito';
@@ -113,7 +187,7 @@ button {
     transition: 0.2s ease-in-out;
 }
 
-button:hover {
+button.send:hover {
   background-color: #212326;
   border-radius: 20px;
   cursor: pointer;
@@ -121,7 +195,11 @@ button:hover {
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD:src/style.css
+button.send:active, button.delete {
+=======
 button:active {
+>>>>>>> master:style.css
   transition: 0.05s ease-in-out;
   transform: scale(0.95);
 }
@@ -140,11 +218,24 @@ button:active {
   text-align: center;
 }
 
+#profileBar {
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 81%;
+  background-color: #2f3136;
+  box-shadow: 0 0 3px black;
+  border-radius: 10px;
+  width: 20%;
+  margin-top: 0.5%;
+  height: 98%;
+}
+
 #socialIcons {
   position: fixed;
   bottom: 0;
-  right: 0;
-  padding: 0px 10px 10px 0px;
+  left: 0;
+  padding: 10px 10px 10px 10px;
   transition: 0.2s ease-in-out;
 }
 

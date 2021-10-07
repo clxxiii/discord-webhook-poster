@@ -12,7 +12,7 @@ function OnInput() {
 
 function onLoad() {
   let fieldData = JSON.parse( localStorage.getItem("fieldData") );
-
+  console.log("Logging Previous Send (Saved from last session)");
   console.log(fieldData);
 
   var WEBHOOK_URL = document.getElementById('webhookUrl');
@@ -36,7 +36,10 @@ function onLoad() {
   color.value = fieldData.color;
   username.value = fieldData.username;
   avatar_url.value = fieldData.avatar_url;
+
+  updateProfileList();
 }
+
 // Collapse embed fields when "include embeds" is off
 function embedFieldToggle() {
   var includeEmbed = document.getElementById('includeEmbed').checked;
@@ -47,7 +50,7 @@ function embedFieldToggle() {
     console.log("make hidden")
   }
   else {
-    embedElements.setAttribute("style", "margin-bottom: -27rem; transform: translateY(-50%) scaleY(0)")
+    embedElements.setAttribute("style", "margin-bottom: -32rem; transform: translateY(-50%) scaleY(0)")
     console.log("make visible")
   }
 }
@@ -102,10 +105,10 @@ async function onSendMessageClick() {
     webConsole.innerHTML = "Attempt " + fetchAttempts + ": Webhook posted successfully!";
   }
   else if (httpCode == 0) {
-    webConsole.innerHTML = "Attempt " + fetchAttempts + ": Missing webhook url";
+    webConsole.innerHTML = "Attempt " + fetchAttempts + ": Missing Webhook URL";
   }
   else {
-    webConsole.innerHTML = "Attempt " + fetchAttempts + ": you fucked it up a lot somehow, maybe try slowing down?";
+    webConsole.innerHTML = "Attempt " + fetchAttempts + ": " + httpCode;
   }
 }
 
