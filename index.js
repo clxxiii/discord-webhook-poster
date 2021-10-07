@@ -10,6 +10,34 @@ function OnInput() {
   this.style.height = (this.scrollHeight) + "px";
 }
 
+function onLoad() {
+  let fieldData = JSON.parse( localStorage.getItem("fieldData") );
+
+  console.log(fieldData);
+
+  var WEBHOOK_URL = document.getElementById('webhookUrl');
+  var content = document.getElementById('content');
+  var includeEmbed = document.getElementById('includeEmbed');
+  var title = document.getElementById('embedTitle');
+  var description = document.getElementById('embedDesc');
+  var image = document.getElementById('embedImage');
+  var thumbnail = document.getElementById('embedThumbnail');
+  var color = document.getElementById('embedColor');
+  var username = document.getElementById('username');
+  var avatar_url = document.getElementById('avatar');
+
+  WEBHOOK_URL.value = fieldData.WEBHOOK_URL;
+  content.value = fieldData.content;
+  includeEmbed.value = fieldData.includeEmbed;
+  title.value = fieldData.title;
+  description.value = fieldData.description;
+  image.value = fieldData.image;
+  thumbnail.value = fieldData.thumbnail;
+  color.value = fieldData.color;
+  username.value = fieldData.username;
+  avatar_url.value = fieldData.avatar_url;
+}
+// Collapse embed fields when "include embeds" is off
 function embedFieldToggle() {
   var includeEmbed = document.getElementById('includeEmbed').checked;
   var embedElements = document.getElementById('embedElements');
@@ -25,6 +53,7 @@ function embedFieldToggle() {
 }
 
 var fetchAttempts = 0;
+
 async function onSendMessageClick() {
   var WEBHOOK_URL = document.getElementById('webhookUrl').value;
   var content = document.getElementById('content').value;
@@ -38,7 +67,11 @@ async function onSendMessageClick() {
   var avatar_url = document.getElementById('avatar').value;
   var webConsole = document.getElementById('webConsole');
 
-  console.log(WEBHOOK_URL);
+  // Save text to local storage
+  let localSave = {WEBHOOK_URL, content, includeEmbed, title, description,
+    image, thumbnail, color, username, avatar_url};
+  console.log(localSave);
+  localStorage.setItem("fieldData", JSON.stringify(localSave) );
 
   if (includeEmbed) {
     var embed = [
@@ -85,7 +118,6 @@ async function sendPayload(p, url) {
     body: JSON.stringify(p)
   };
 
-  console.log(p)
   fetchAttempts++;
   try {
     response = await fetch(url, params);
