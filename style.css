@@ -69,7 +69,7 @@ input[type="text"]:focus {
   width: 98%;
 }
 
-input[type=checkbox] {
+input[type=checkbox].checkmark {
   background-color: #40444b;
   text-align: center;
   appearance: none;
@@ -82,11 +82,11 @@ input[type=checkbox] {
   transition: 0.1s ease-in-out;
 }
 
-input[type=checkbox]:active, input[type=checkbox]:checked:active {
+input[type=checkbox]:active.checkmark, input[type=checkbox]:checked:active.checkmark {
   background-color: #2f3136;
 }
 
-input[type=checkbox]:checked:after {
+input[type=checkbox]:checked:after.checkmark {
   content: '\2714';
   vertical-align: top;
   font-size: 18px;
@@ -135,11 +135,23 @@ button:hover {
   text-align: center;
 }
 
+#profileBar {
+  position: fixed;
+  top: 0;
+  right: -10;
+  background-color: #2f3136;
+  box-shadow: 0 0 3px black;
+  border-radius: 10px;
+  width: 20%;
+  margin-top: 0.5%;
+  height: 98%;
+}
+
 #socialIcons {
   position: fixed;
   bottom: 0;
-  right: 0;
-  padding: 0px 10px 10px 0px;
+  left: 0;
+  padding: 10px 10px 10px 10px;
   transition: 0.2s ease-in-out;
 }
 
