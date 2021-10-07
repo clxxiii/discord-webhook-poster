@@ -59,14 +59,27 @@ textarea:focus {
   box-shadow: 0 2px 10px #333333;
 }
 
-input[type="text"] {
+input[type="text"].webhookText {
   margin: 0%;
   width: 46%;
 }
 
 input[type="text"]:focus {
   outline: none;
+}
+
+input[type="text"].webhookText:focus {
   width: 98%;
+}
+
+input[type="text"].profile {
+  margin: 10px 10% 0 10%;
+  width: 80%
+}
+
+input[type="text"].profile:focus {
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px #333333;
 }
 
 input[type=checkbox].checkmark {
@@ -86,7 +99,7 @@ input[type=checkbox]:active.checkmark, input[type=checkbox]:checked:active.check
   background-color: #2f3136;
 }
 
-input[type=checkbox]:checked:after.checkmark {
+input[type=checkbox].checkmark:checked:after {
   content: '\2714';
   vertical-align: top;
   font-size: 18px;
@@ -100,7 +113,36 @@ input[type=checkbox]:checked:after.checkmark {
   font-size: 32;
 }
 
-button {
+button.save, button.load {
+ font-family: 'Nunito';
+ width: 40%;
+ margin: 20px 4.5% 0% 4.5%;
+ height: 40px;
+ color: white;
+ font-size: 20px;
+ font-weight: bold;
+ border: 0;
+ border-radius: 10px;
+ transition: 0.1s ease-in-out;
+ cursor: pointer;
+}
+button.save {
+  background-color: #5865F2;
+}
+
+button.load {
+  background-color: #3BA45C;
+}
+
+button.save:hover, button.load:hover {
+ filter: brightness(110%);
+ box-shadow: 0 0 3px black;
+}
+
+button.save:active, button.load:active {
+  transform: scale(0.98);
+}
+button.send {
     margin: 1%;
     background-color: #2f3136;
     font-family: 'Nunito';
@@ -113,7 +155,7 @@ button {
     transition: 0.2s ease-in-out;
 }
 
-button:hover {
+button:hover.send {
   background-color: #212326;
   border-radius: 20px;
   cursor: pointer;
@@ -121,7 +163,7 @@ button:hover {
   transform: translateY(-2px);
 }
 
-button:active {
+button:active.send {
   transition: 0.05s ease-in-out;
   transform: scale(0.95);
 }
