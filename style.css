@@ -121,6 +121,11 @@ button:hover {
   transform: translateY(-2px);
 }
 
+button:active {
+  transition: 0.05s ease-in-out;
+  transform: scale(0.95);
+}
+
 #parameterBoxes {
   line-height: 2.2em;
   padding: 10px 0px 20px 0px;
