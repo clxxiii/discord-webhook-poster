@@ -195,7 +195,11 @@ button.send:hover {
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD:src/style.css
 button.send:active, button.delete {
+=======
+button:active {
+>>>>>>> master:style.css
   transition: 0.05s ease-in-out;
   transform: scale(0.95);
 }
