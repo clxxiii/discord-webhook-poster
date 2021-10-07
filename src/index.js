@@ -12,7 +12,7 @@ function OnInput() {
 
 function onLoad() {
   let fieldData = JSON.parse( localStorage.getItem("fieldData") );
-
+  console.log("Logging Previous Send (Saved from last session)");
   console.log(fieldData);
 
   var WEBHOOK_URL = document.getElementById('webhookUrl');
@@ -36,6 +36,8 @@ function onLoad() {
   color.value = fieldData.color;
   username.value = fieldData.username;
   avatar_url.value = fieldData.avatar_url;
+
+  updateProfileList();
 }
 
 // Collapse embed fields when "include embeds" is off

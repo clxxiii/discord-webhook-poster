@@ -21,6 +21,42 @@ body {
   margin-bottom: 30px;
 }
 
+.deleteButton {
+  border: 0;
+  width: 60%;
+  height: 20px;
+  background: transparent;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  color: white;
+}
+.deleteButton:hover {
+  background-color: #ED4245;
+  text-shadow: 0 0 10px black;
+  transform: translateY(-2px);
+}
+
+#profile {
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+    border-radius: 10px;
+    background-color: #4A4D56;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+#profile:hover {
+    text-shadow: 0 0 4px black;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px #222222;
+}
+
 #embedElements {
   margin: auto;
   margin-top: 10px;
@@ -110,13 +146,13 @@ input[type=checkbox].checkmark:checked:after {
 
 #title {
   text-align: center;
-  font-size: 32;
+  font-size: 32px;
 }
 
-button.save, button.load {
+button.save {
  font-family: 'Nunito';
  width: 40%;
- margin: 20px 4.5% 0% 4.5%;
+ margin: 20px 4.5% 10px 4.5%;
  height: 40px;
  color: white;
  font-size: 20px;
@@ -130,16 +166,12 @@ button.save {
   background-color: #5865F2;
 }
 
-button.load {
-  background-color: #3BA45C;
-}
-
-button.save:hover, button.load:hover {
+button.save:hover {
  filter: brightness(110%);
  box-shadow: 0 0 3px black;
 }
 
-button.save:active, button.load:active {
+button.save:active {
   transform: scale(0.98);
 }
 button.send {
@@ -155,7 +187,7 @@ button.send {
     transition: 0.2s ease-in-out;
 }
 
-button:hover.send {
+button.send:hover {
   background-color: #212326;
   border-radius: 20px;
   cursor: pointer;
@@ -163,7 +195,7 @@ button:hover.send {
   transform: translateY(-2px);
 }
 
-button:active.send {
+button.send:active, button.delete {
   transition: 0.05s ease-in-out;
   transform: scale(0.95);
 }
@@ -184,8 +216,9 @@ button:active.send {
 
 #profileBar {
   position: fixed;
+  text-align: center;
   top: 0;
-  right: -10;
+  left: 81%;
   background-color: #2f3136;
   box-shadow: 0 0 3px black;
   border-radius: 10px;
