@@ -50,7 +50,7 @@ function embedFieldToggle() {
     console.log("make hidden")
   }
   else {
-    embedElements.setAttribute("style", "margin-bottom: -27rem; transform: translateY(-50%) scaleY(0)")
+    embedElements.setAttribute("style", "margin-bottom: -32rem; transform: translateY(-50%) scaleY(0)")
     console.log("make visible")
   }
 }
