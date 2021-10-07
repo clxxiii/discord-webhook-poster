@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="./src/font/whitney/style.css" \>
   <link rel="icon" href="https://cdn.discordapp.com/avatars/265144290240495617/caf8d14e3e82cf096d91980dce17b998.webp?size=160">
 </head>
-<body onload="OnInput()">
+<body onload="">
   <div id="webhookUrlBox">
     <div id="title">Webhook URL</div>
     <input id="webhookUrl" type="text" placeholder="https://discord.com/api/webhooks/..."></input>
@@ -17,25 +17,26 @@
       <label for="">Avatar:</label><br>
       <textarea name="avatar" id="avatar" placeholder="URL"></textarea><br>
       <label for="">Content:</label><br>
-      <textarea name="content" id="content" placeholder="Message..."></textarea><br><br>
+      <textarea name="content" id="content" placeholder="Message..."></textarea><br>
       <div id="checkbox">
         <label for="">Include Embed?</label><br>
-        <input type="checkbox" id="includeEmbed" placeholder=""></input><br>
+        <input type="checkbox" id="includeEmbed" onclick="embedFieldToggle()"></input><br>
       </div>
-      <label for="">Title:</label><br>
-      <textarea name="embedTitle" id="embedTitle" placeholder="Message..."></textarea><br>
-      <label for="">Thumbnail:</label><br>
-      <textarea name="embedThumbnail" id="embedThumbnail" placeholder="URL"></textarea><br>
-      <label for="">Description:</label><br>
-      <textarea name="embedDesc" id="embedDesc" placeholder="Message..."></textarea><br>
-      <label for="">Image:</label><br>
-      <textarea name="embedImage" id="embedImage" placeholder="URL"></textarea><br>
-      <label for="">Color:</label><br>
-      <textarea name="embedColor" id="embedColor" placeholder="#RRGGBB"></textarea><br>
-
+      <div id="embedElements">
+        <label for="">Title:</label><br>
+        <textarea name="embedTitle" id="embedTitle" placeholder="Message..."></textarea><br>
+        <label for="">Thumbnail:</label><br>
+        <textarea name="embedThumbnail" id="embedThumbnail" placeholder="URL"></textarea><br>
+        <label for="">Description:</label><br>
+        <textarea name="embedDesc" id="embedDesc" placeholder="Message..."></textarea><br>
+        <label for="">Image:</label><br>
+        <textarea name="embedImage" id="embedImage" placeholder="URL"></textarea><br>
+        <label for="">Color:</label><br>
+        <textarea name="embedColor" id="embedColor" placeholder="#RRGGBB"></textarea><br>
+      </div>
 
     </div>
-    <button onclick="onClick()">Send Webhook Message</button>
+    <button onclick="onSendMessageClick()">Send Webhook Message</button>
   </div>
   <div id ="webConsole">
       Awaiting Input...

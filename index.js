@@ -10,10 +10,22 @@ function OnInput() {
   this.style.height = (this.scrollHeight) + "px";
 }
 
-function onLoad() { OnInput(); }
+function embedFieldToggle() {
+  var includeEmbed = document.getElementById('includeEmbed').checked;
+  var embedElements = document.getElementById('embedElements');
+
+  if (includeEmbed) {
+    embedElements.setAttribute("style", "margin-bottom: 0%; transform: translateY(0px) scaleY(1)")
+    console.log("make hidden")
+  }
+  else {
+    embedElements.setAttribute("style", "margin-bottom: -27rem; transform: translateY(-50%) scaleY(0)")
+    console.log("make visible")
+  }
+}
 
 var fetchAttempts = 0;
-async function onClick() {
+async function onSendMessageClick() {
   var WEBHOOK_URL = document.getElementById('webhookUrl').value;
   var content = document.getElementById('content').value;
   var includeEmbed = document.getElementById('includeEmbed').checked;

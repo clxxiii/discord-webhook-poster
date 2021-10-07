@@ -20,9 +20,21 @@ body {
 #webhookUrlBox {
   margin-bottom: 30px;
 }
+
+#embedElements {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: -27rem;
+  padding-bottom: 30px;
+  border-radius: 20px;
+  background-color: #2c2e33;
+  width: 80%;
+  transform: translateY(-50%) scaleY(0);
+  transition: 0.3s ease-in-out;
+}
+
 label {
   vertical-align: middle;
-  text-align: ;
 }
 
 input[type="text"], textarea {
@@ -32,7 +44,6 @@ input[type="text"], textarea {
   border: 0;
   font-family: 'Nunito';
   font-weight: bold;
-  vertical-align: super;
   width: 60%;
   border-radius: 10px;
   padding: 5px 5px 5px 5px;
